@@ -1,0 +1,42 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.13
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/gray95/sqaas-openqcd2.0:
+      branch: main
+      repo: https://github.com/gray95/sqaas-openqcd2.0
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/gray95/sqaas-openqcd2.0 git:
+        commands:
+        - /usr/bin/env sh .sqa/script.stuffy-sapphire-cassowary.sh
+        container: qc.acc_scanty-grey-gharial
+  QC.Doc:
+    repos:
+      github.com/gray95/sqaas-openqcd2.0 find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.pokey-teal-eel.sh
+        container: qc.doc_snoopy-maroon-cougar
+      github.com/gray95/sqaas-openqcd2.0 git:
+        commands:
+        - /usr/bin/env sh .sqa/script.grumpy-dandelion-buffalo.sh
+        container: qc.doc_sleepy-cyan-sponge
+  QC.Lic:
+    repos:
+      github.com/gray95/sqaas-openqcd2.0 licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.breezy-rose-audemer.sh
+        container: qc.lic_wheezy-magenta-tzu
+  QC.Ver:
+    repos:
+      github.com/gray95/sqaas-openqcd2.0 get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.frumpy-mustard-hare.sh
+        container: qc.ver_sleazy-red-worm
+timeout: 5400
