@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.13
+      branch: release/1.8.0
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/gray95/sqaas-openqcd2.0:
       branch: main
@@ -15,28 +15,28 @@ sqa_criteria:
     repos:
       github.com/gray95/sqaas-openqcd2.0 git:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-cerulean-earwig.sh
-        container: qc.acc_leaky-chocolate-rabbit
+        - /usr/bin/env sh .sqa/script.muggy-lime-bird.sh
+        container: qc.acc_skanky-ochre-dachshund
   QC.Doc:
     repos:
       github.com/gray95/sqaas-openqcd2.0 find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.flimsy-cyan-schnauzer.sh
-        container: qc.doc_droopy-red-camel
+        - /usr/bin/env sh .sqa/script.fuzzy-magnolia-mayfly.sh
+        container: qc.doc_ugly-ecru-newt
       github.com/gray95/sqaas-openqcd2.0 git:
         commands:
-        - /usr/bin/env sh .sqa/script.freaky-sepia-cat.sh
-        container: qc.doc_shaggy-ultramarine-boar
+        - /usr/bin/env sh .sqa/script.sunny-vermilion-leopard.sh
+        container: qc.doc_lousy-teal-foxhound
   QC.Lic:
     repos:
       github.com/gray95/sqaas-openqcd2.0 licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.skimpy-aquamarine-markhor.sh
-        container: qc.lic_cloudy-xanthic-tarantula
+        - /usr/bin/env sh .sqa/script.squirrely-asparagus-harrier.sh
+        container: qc.lic_scummy-amber-woodlouse
   QC.Ver:
     repos:
       github.com/gray95/sqaas-openqcd2.0 get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-cream-worm.sh
-        container: qc.ver_baggy-pink-squid
+        - /usr/bin/env sh .sqa/script.surly-pink-maltese.sh
+        container: qc.ver_sleazy-linen-bobcat
 timeout: 5400
