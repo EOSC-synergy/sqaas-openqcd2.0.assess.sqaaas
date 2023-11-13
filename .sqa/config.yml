@@ -15,28 +15,28 @@ sqa_criteria:
     repos:
       github.com/gray95/sqaas-openqcd2.0 git:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-amber-armadillo.sh
-        container: qc.acc_shaky-olive-bordeaux
+        - /usr/bin/env sh .sqa/script.wheezy-beige-cockroach.sh
+        container: qc.acc_stealthy-green-jaguar
   QC.Doc:
     repos:
       github.com/gray95/sqaas-openqcd2.0 find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.smelly-scarlet-orangutan.sh
-        container: qc.doc_trippy-brown-hyrax
+        - /usr/bin/env sh .sqa/script.randy-ruby-goat.sh
+        container: qc.doc_tacky-chestnut-caiman
       github.com/gray95/sqaas-openqcd2.0 git:
         commands:
-        - /usr/bin/env sh .sqa/script.wimpy-platinum-rattlesnake.sh
-        container: qc.doc_foggy-aquamarine-spaniel
+        - /usr/bin/env sh .sqa/script.greasy-pear-peccary.sh
+        container: qc.doc_flabby-peach-hippopotamus
   QC.Lic:
     repos:
       github.com/gray95/sqaas-openqcd2.0 licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-ultramarine-ibis.sh
-        container: qc.lic_pasty-tangerine-hare
+        - /usr/bin/env sh .sqa/script.gummy-bistre-wallaby.sh
+        container: qc.lic_chewy-cream-walrus
   QC.Ver:
     repos:
       github.com/gray95/sqaas-openqcd2.0 get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-wisteria-sloth.sh
-        container: qc.ver_scanty-mustard-capybara
+        - /usr/bin/env sh .sqa/script.cozy-cobalt-cattle.sh
+        container: qc.ver_cozy-lime-schnauzer
 timeout: 5400
