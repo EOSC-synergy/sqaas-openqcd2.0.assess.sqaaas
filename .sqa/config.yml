@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.13
+      branch: release/1.8.0
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/gray95/sqaas-openqcd2.0:
       branch: main
@@ -15,32 +15,32 @@ sqa_criteria:
     repos:
       github.com/gray95/sqaas-openqcd2.0 git:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-russet-opossum.sh
-        container: qc.acc_surly-viridian-serval
+        - /usr/bin/env sh .sqa/script.flimsy-ivory-manatee.sh
+        container: qc.acc_stealthy-olive-liger
   QC.Doc:
     repos:
       github.com/gray95/sqaas-openqcd2.0 find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.snoopy-firebrick-wolverine.sh
-        container: qc.doc_chummy-sapphire-cockroach
+        - /usr/bin/env sh .sqa/script.seedy-lilac-seahorse.sh
+        container: qc.doc_crabby-gamboge-emu
       github.com/gray95/sqaas-openqcd2.0 git:
         commands:
-        - /usr/bin/env sh .sqa/script.lousy-cerulean-indri.sh
-        container: qc.doc_droopy-gold-zebra
+        - /usr/bin/env sh .sqa/script.foggy-smalt-discus.sh
+        container: qc.doc_scummy-bronze-butterfly
       github.com/gray95/sqaas-openqcd2.0 markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.wiggy-salmon-worm.sh
-        container: qc.doc_cloudy-coral-flounder
+        - /usr/bin/env sh .sqa/script.pretty-amber-salamander.sh
+        container: qc.doc_lanky-ultramarine-lynx
   QC.Lic:
     repos:
       github.com/gray95/sqaas-openqcd2.0 licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-chocolate-numbat.sh
-        container: qc.lic_snippy-chartreuse-wildebeest
+        - /usr/bin/env sh .sqa/script.zippy-rust-spaniel.sh
+        container: qc.lic_leaky-magenta-armadillo
   QC.Ver:
     repos:
       github.com/gray95/sqaas-openqcd2.0 get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-blue-crane.sh
-        container: qc.ver_gamy-lavender-wombat
+        - /usr/bin/env sh .sqa/script.woozy-purple-pinscher.sh
+        container: qc.ver_zippy-cornflower-forest
 timeout: 5400
