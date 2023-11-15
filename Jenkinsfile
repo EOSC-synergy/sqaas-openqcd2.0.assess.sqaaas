@@ -14,8 +14,9 @@ pipeline {
             when {
                 not {
                     anyOf {
-                        changeset: ".badge/*"
-                        changeset: ".report/*"
+                        changeset ".badge/*"
+                        changeset ".report/*"
+                        changeset "Jenkinsfile"
                     }
                 }
             }
