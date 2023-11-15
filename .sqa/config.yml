@@ -15,32 +15,32 @@ sqa_criteria:
     repos:
       github.com/gray95/sqaas-openqcd2.0 git:
         commands:
-        - /usr/bin/env sh .sqa/script.shaky-aquamarine-lionfish.sh
-        container: qc.acc_chewy-ecru-cattle
+        - /usr/bin/env sh .sqa/script.goopy-cream-balinese.sh
+        container: qc.acc_ugly-vermilion-lemming
   QC.Doc:
     repos:
       github.com/gray95/sqaas-openqcd2.0 find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.homey-plum-seahorse.sh
-        container: qc.doc_lovely-plum-monkey
+        - /usr/bin/env sh .sqa/script.lumpy-red-macaw.sh
+        container: qc.doc_craggy-eggplant-elephant
       github.com/gray95/sqaas-openqcd2.0 git:
         commands:
-        - /usr/bin/env sh .sqa/script.messy-olive-hamster.sh
-        container: qc.doc_foggy-tangerine-moose
+        - /usr/bin/env sh .sqa/script.skinny-black-chin.sh
+        container: qc.doc_wiggy-aquamarine-affenpinscher
       github.com/gray95/sqaas-openqcd2.0 markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.lanky-orange-blue.sh
-        container: qc.doc_cranky-puce-terrier
+        - /usr/bin/env sh .sqa/script.shabby-cobalt-dachsbracke.sh
+        container: qc.doc_cranky-chestnut-gharial
   QC.Lic:
     repos:
       github.com/gray95/sqaas-openqcd2.0 licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-aquamarine-balinese.sh
-        container: qc.lic_goopy-saffron-forest
+        - /usr/bin/env sh .sqa/script.scaly-mauve-caracal.sh
+        container: qc.lic_foggy-bistre-beaver
   QC.Ver:
     repos:
       github.com/gray95/sqaas-openqcd2.0 get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.wheezy-harlequin-penguin.sh
-        container: qc.ver_fuzzy-periwinkle-harrier
+        - /usr/bin/env sh .sqa/script.scaly-pumpkin-bear.sh
+        container: qc.ver_randy-rust-mole
 timeout: 5400
