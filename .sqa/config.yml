@@ -15,32 +15,32 @@ sqa_criteria:
     repos:
       github.com/gray95/sqaas-openqcd2.0 git:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-sangria-chinook.sh
-        container: qc.acc_gamy-cornflower-skunk
+        - /usr/bin/env sh .sqa/script.tasty-mustard-chipmunk.sh
+        container: qc.acc_tasty-chocolate-meerkat
   QC.Doc:
     repos:
       github.com/gray95/sqaas-openqcd2.0 find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.woolly-tan-hound.sh
-        container: qc.doc_scummy-ochre-deer
+        - /usr/bin/env sh .sqa/script.snappy-alizarin-bulldog.sh
+        container: qc.doc_sickly-bronze-nightingale
       github.com/gray95/sqaas-openqcd2.0 git:
         commands:
-        - /usr/bin/env sh .sqa/script.freaky-wisteria-squirt.sh
-        container: qc.doc_lanky-red-kakapo
+        - /usr/bin/env sh .sqa/script.sleazy-tan-cheetah.sh
+        container: qc.doc_gloppy-cardinal-rattlesnake
       github.com/gray95/sqaas-openqcd2.0 markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-brass-ragdoll.sh
-        container: qc.doc_pretty-coral-caterpillar
+        - /usr/bin/env sh .sqa/script.randy-gold-cassowary.sh
+        container: qc.doc_paltry-myrtle-warthog
   QC.Lic:
     repos:
       github.com/gray95/sqaas-openqcd2.0 licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.lovely-maroon-impala.sh
-        container: qc.lic_woozy-gold-bison
+        - /usr/bin/env sh .sqa/script.gloppy-aquamarine-ray.sh
+        container: qc.lic_gloppy-olive-cuttlefish
   QC.Ver:
     repos:
       github.com/gray95/sqaas-openqcd2.0 get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.freaky-tomato-giraffe.sh
-        container: qc.ver_thirsty-cerise-audemer
+        - /usr/bin/env sh .sqa/script.snippy-magnolia-dragon.sh
+        container: qc.ver_cheeky-cobalt-cuscus
 timeout: 5400
