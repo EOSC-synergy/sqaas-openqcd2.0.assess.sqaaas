@@ -16,7 +16,7 @@ pipeline {
                     anyOf {
                         changeset ".badge/*"
                         changeset ".report/*"
-                        changeset "Jenkinsfile"
+                        changeset "README.md"
                     }
                 }
             }
