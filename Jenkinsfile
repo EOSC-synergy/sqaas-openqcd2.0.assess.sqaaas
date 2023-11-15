@@ -13,9 +13,7 @@ pipeline {
         stage('SQA baseline criterion: QC.Acc & QC.Doc & QC.Lic & QC.Ver') {
             when {
                 allOf {
-		    not {
-			changeset pattern: "\\.badge+|\\.report+", comparator: "REGEXP"
-		    }
+		    changeset pattern: "\\.sqa+|Jenkinsfile", comparator: "REGEXP"
                 }
             }
             steps {
