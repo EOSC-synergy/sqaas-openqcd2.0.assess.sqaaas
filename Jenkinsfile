@@ -11,6 +11,11 @@ pipeline {
 
     stages {
         stage('SQA baseline criterion: QC.Acc & QC.Doc & QC.Lic & QC.Ver') {
+            when {
+                allOf {
+		    changeset pattern: "\\.sqa|Jenkinsfile", comparator: "REGEXP"
+                }
+            }
             steps {
                 script {
                     projectConfig = pipelineConfig(
