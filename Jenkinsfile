@@ -12,9 +12,12 @@ pipeline {
     stages {
         stage('SQA baseline criterion: QC.Acc & QC.Doc & QC.Lic & QC.Ver') {
             when {
-                    not {
-                        changeset pattern: "\\.badge+|\\.report+|\\README+", comparator: "REGEXP"
+                not {
+                    anyOf {
+                        changeset: ".badge/*"
+                        changeset: ".report/*"
                     }
+                }
             }
             steps {
                 script {
