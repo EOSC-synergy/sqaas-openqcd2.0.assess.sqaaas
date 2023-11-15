@@ -12,9 +12,7 @@ pipeline {
     stages {
         stage('SQA baseline criterion: QC.Acc & QC.Doc & QC.Lic & QC.Ver') {
             when {
-                not {
-                    changeset pattern: "\.badge|\.report", comparator: "REGEXP"
-                }
+                changeset pattern: "\\.sqa", comparator: "REGEXP"
             }
             steps {
                 script {
