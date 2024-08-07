@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.8.0
+      branch: release/2.2.1
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/gray95/sqaas-openqcd2.0:
       branch: main
@@ -15,32 +15,38 @@ sqa_criteria:
     repos:
       github.com/gray95/sqaas-openqcd2.0 git:
         commands:
-        - /usr/bin/env sh .sqa/script.cranky-rust-magpie.sh
-        container: qc.acc_silly-tomato-rat
+        - /usr/bin/env sh .sqa/script.snippy-orange-tarantula.sh
+        container: qc.acc_crabby-red-kingfisher
   QC.Doc:
     repos:
       github.com/gray95/sqaas-openqcd2.0 find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.goopy-blue-fossa.sh
-        container: qc.doc_sunny-pink-scorpion
+        - /usr/bin/env sh .sqa/script.sunny-brass-gibbon.sh
+        container: qc.doc_scanty-lemon-crane
       github.com/gray95/sqaas-openqcd2.0 git:
         commands:
-        - /usr/bin/env sh .sqa/script.pretty-periwinkle-penguin.sh
-        container: qc.doc_seedy-teal-lynx
+        - /usr/bin/env sh .sqa/script.sickly-lilac-markhor.sh
+        container: qc.doc_shaky-sepia-quokka
       github.com/gray95/sqaas-openqcd2.0 markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.blurry-purple-rattlesnake.sh
-        container: qc.doc_lanky-asparagus-chihuahua
+        - /usr/bin/env sh .sqa/script.skanky-pumpkin-setter.sh
+        container: qc.doc_silly-malachite-dunker
   QC.Lic:
     repos:
       github.com/gray95/sqaas-openqcd2.0 licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.snazzy-chartreuse-turkey.sh
-        container: qc.lic_paltry-dandelion-burmese
+        - /usr/bin/env sh .sqa/script.dorky-orchid-lobster.sh
+        container: qc.lic_skimpy-peach-neanderthal
+  QC.Sty:
+    repos:
+      github.com/gray95/sqaas-openqcd2.0 oclint:
+        commands:
+        - /usr/bin/env sh .sqa/script.greasy-cinnabar-wombat.sh
+        container: qc.sty_thirsty-razzmatazz-squirrel
   QC.Ver:
     repos:
       github.com/gray95/sqaas-openqcd2.0 get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.snazzy-tangerine-dingo.sh
-        container: qc.ver_stinky-lemon-birman
+        - /usr/bin/env sh .sqa/script.leaky-mustard-quoll.sh
+        container: qc.ver_shaggy-myrtle-toucan
 timeout: 5400
